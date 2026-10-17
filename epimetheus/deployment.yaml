@@ -23,7 +23,7 @@ metadata:
   labels:
     app: epimetheus
 spec:
-  replicas: 2
+  replicas: 3
 
   selector:
     matchLabels:
@@ -84,10 +84,10 @@ spec:
             # guaranteed. Limits are the ceiling it may burst to.
             requests:
               cpu: "100m"
-              memory: "64Mi"
+              memory: "128Mi"
             limits:
-              cpu: "750m"
-              memory: "192Mi"
+              cpu: "500m"
+              memory: "128Mi"
 
           # Is the process alive? A failing liveness probe restarts the pod.
           livenessProbe:
