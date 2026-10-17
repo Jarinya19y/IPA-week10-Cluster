@@ -23,7 +23,7 @@ metadata:
   labels:
     app: epimetheus
 spec:
-  replicas: 1
+  replicas: 3
 
   selector:
     matchLabels:
@@ -83,7 +83,7 @@ spec:
             # Requests are what the scheduler reserves — what a pod is
             # guaranteed. Limits are the ceiling it may burst to.
             requests:
-              cpu: "300m"
+              cpu: "100m"
               memory: "64Mi"
             limits:
               cpu: "500m"
